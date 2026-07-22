@@ -11,7 +11,6 @@ class DBHelper:
         print('[DBHelper] Connection Created')
 
 
-
     def select_collection(self, collection_name='users'):
         self.collection = self.db[collection_name]
         print('[DBHelper] Collection Selected:"', collection_name)
@@ -21,6 +20,10 @@ class DBHelper:
     def save(self, document):
        inserted_id = self.collection.insert_one(document)
        print('[DBHelper] Document Saved. Id is:', inserted_id)
+
+    def save_many(self, document):
+           inserted_id = self.collection.insert_many(document)
+           print('[DBHelper] Documents Saved')
 
 
 
