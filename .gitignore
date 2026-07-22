@@ -1,0 +1,16 @@
+.venv/
+
+__pycache__/
+
+.DS_Store
+.AppleDouble
+*.pyc
+.env
+Thumbs.db 
+ehthumbs.db 
+Log.txt
+testapp.py
+testapp2.py
+apikey.txt
+
+.vscode/
