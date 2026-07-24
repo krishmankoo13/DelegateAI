@@ -9,13 +9,14 @@ from pages.dashboard import page_dashboard
 
 def main():
     # Save contacts in the database
-    # save_contacts()
+    #save_contacts()
     
     pg = st.navigation(
         [
             st.Page(page_tasks, title='Save Tasks'),
             st.Page(page_calls, title='Execute Calls'),
-            st.Page(page_dashboard, title='Dashboard')
+            st.Page(page_dashboard, title='Dashboard')                                                                                                                                                                                                                                                                                                                                                           
+            
         ]
     )
 
