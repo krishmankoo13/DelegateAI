@@ -1,7 +1,15 @@
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
-from config import MONGODB_URI
+from config import MONGODB_URI,DB_NAME
 import json
+
+#Database references to perform direct operations
+mongo_client=MongoClient(MONGODB_URI, server_api=ServerApi('1'))
+db = mongo_client[DB_NAME]
+tasks_collection=db['tasks']
+contacts_collection=db['contacts']
+
+
 
 class DBHelper:
 

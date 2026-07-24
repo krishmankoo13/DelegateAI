@@ -18,6 +18,7 @@ def save_task(task):
         f"Task saved successfully as **pending** \n\n",
         f"**Action** {task['action']} \n\n",
         f"**Title** {task['title']} \n\n",
+        f"**Contact Name** {task['name']} \n\n",
         f"**Description** {task['description']} \n\n"
     )
 
@@ -40,6 +41,10 @@ tools = [
                     "type": "string",
                     "description": "Description of the Task",
                 },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the contact person",
+                },                
                 "action": {
                     "type": "string",
                     "enum": ["call", "email", "message", "other"],
